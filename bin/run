@@ -1,0 +1,4 @@
+#!/bin/sh
+
+bundle exec rake db:create db:migrate db:seed
+puma -b tcp://0.0.0.0:3000 -e production
